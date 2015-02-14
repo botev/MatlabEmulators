@@ -5,7 +5,11 @@ A collection of different emulators for both MDPs and POMDPs interfaced to Matla
 ## Installation
 
 To install the package just clone the repository and add it to your Matlab classpath by using the command
-`addpath(genpath('<downloadPath>/MatlabEmulators'))`
+`addpath(genpath('<downloadPath>/MatlabEmulators'));`
+
+Some of the emulators require additional steps to be installed properly. These a presented below.
+
+### ALE - Agent Learning Environment
 
 ## Usage
 
