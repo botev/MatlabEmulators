@@ -14,7 +14,7 @@ Some of the emulators require additional steps to be installed properly as descr
 1. Download the most recent version of ALE from the [official ALE webpage](http://www.arcadelearningenvironment.org/downloads/)
 2. Compile the agent using Ant as described in the manual file
 3. In Matlab go to the 'ale' folder and run 'aleMex.m', by  editing accordingly to where you downloaded and compiled the ALE project. **[Requires 'class_handle.hpp' to be on the include path]**
-4. Copy the ALE library (libale.so) to '<Matlab Install Dir>/extern/lib/<platform>/'
+4. Copy the ALE library (libale.so) to `<Matlab Install Dir>/extern/lib/<platform>/`
 5. Run the 'aleTest.m' to confim that the insallation was correct. All supported game's ROMs are included in the package.
 6. Done!
 
