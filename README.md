@@ -12,12 +12,14 @@ Some of the emulators require additional steps to be installed properly as descr
 ### ALE - Agent Learning Environment - tested for version 0.4.4
 
 1. Download the most recent version of ALE from the [official ALE webpage](http://www.arcadelearningenvironment.org/downloads/)
-2. Compile the library usinge make as described in the *manual.pdf*
-3. Make sure the project is added to the Matlab path 
-3. In Matlab change the working directory to *MatlabEmulators/ale* folder and run *aleMex.m*, by  editing accordingly the script to where you downloaded and compiled the ALE project. **[Requires *class_handle.hpp* to be on the include path]**
-4. Copy the ALE library *libale.so* from the location where you compiled the project to `<Matlab Install Dir>/extern/lib/<platform>/`
-5. Run the *aleTest.m* script to confim that the insallation was correct. All supported game's ROMs are included in the package. If you want at this point you can delete the downlaoded ALE project.
-6. Done!
+2. Edit the file */ale_0.4.4/ale_0_4/src/games/RomSettings.hpp* and change **actions** and **all_actions** from protected to public (lines 73-74)
+3. Edit the file **/ale_0.4.4/ale_0_4/src/ale_interface.hpp* and after line 166 `settings.reset(buildRomRLWrapper(rom_file));` add two more statements: `settings->actions.clear();` and `settings->all_actions.clear();`
+4. Compile the library usinge make as described in the *manual.pdf*
+5. Make sure the project is added to the Matlab path 
+6. In Matlab change the working directory to *MatlabEmulators/ale* folder and run *aleMex.m*, by  editing accordingly the script to where you downloaded and compiled the ALE project. **(Requires *class_handle.hpp* to be on the include path)**
+7. Copy the ALE library *libale.so* from the location where you compiled the project to `<Matlab Install Dir>/extern/lib/<platform>/`
+8.  Run the *aleTest.m* script to confim that the insallation was correct. All supported game's ROMs are included in the package. If you want at this point you can delete the downlaoded ALE project.
+9.  Done!
 
 ## Usage
 
